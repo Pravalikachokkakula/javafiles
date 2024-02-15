@@ -1,21 +1,19 @@
-#include <iostream>
+ #include <iostream>
 #include <iomanip>
-
+using namespace std;
 int main() {
-    std::cout << "Hello" << std::endl;
-    std::cout << "World" << std::endl;
-
-    std::cout << "Hello" << std::ends << "World" << std::endl;
-
-    std::cout << "This is a line without newline" << std::flush;
-
-    std::cout << std::setw(10) << "Width 10" << std::endl;
-
-    std::cout << std::setfill('*') << std::setw(15) << "Width 15" << std::setfill(' ') << std::endl;
-
+    cout << "Hello" <<endl;
+    cout << "World" <<endl;
+    cout << "Hello" << ends << "World" << endl;
+    string s;
+  cout<<"enter a string : ";
+  getline(cin>>ws,s);
+  cout<<"string after removing ws is : "<<s<<endl;
+    cout << "This is a line without newline" << flush;
+    cout << setw(10) << "Width 10" << endl;
+    cout << setfill('*') << setw(15) << "Width 15" << setfill(' ') << endl;
     double pi = 3.14159265358979323846;
-    std::cout << "Pi with default precision: " << pi << std::endl;
-    std::cout << "Pi with precision 3: " << std::setprecision(3) << pi << std::endl;
-
+    cout << "Pi with default precision: " << pi << endl;
+    cout << "Pi with precision 3: " << setprecision(3) << pi << endl;
     return 0;
 }
