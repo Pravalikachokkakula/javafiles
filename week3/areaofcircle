@@ -8,12 +8,12 @@ int main(){
     float radius;
     cout<<"Enter radius :"<<endl;
     cin>>radius;
-    Area(radius);
+    area(radius);
 
 }
 //areaofcircle.h
 #include<iostream>
 using namespace std;
-void Area(float radius){
+void area(float radius){
     cout<<"Area of circle :"<<(PI*radius*radius)<<endl;
 }
