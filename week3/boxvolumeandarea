@@ -1,25 +1,30 @@
 #include<iostream>
-#include "boxvolume.h"
-#include "boxarea.h"
+#include"boxArea.h"
+#include"boxVolume.h"
 using namespace std;
-int main()
-{
+int main (){
     float length,width,height;
-    cin>>length>>width>>height;
-    boxvolume(length,width,height);
-    boxarea(length,width,height);
+    cout << "Enter length : ";
+    cin >> length;
+    cout << "Enter width : ";
+    cin >> width;
+    cout << "Enter height : ";
+    cin >>  height;
+    boxArea(length,width,height);
+    boxVolume(length,width,height);
+
 }
-//boxvolume.h
+
+//boxArea.h
 #include<iostream>
 using namespace std;
-void boxvolume(float length,float width,float height)
-{
-    cout<<"volume of box : "<<length*width*height<<endl;
+void boxArea(float length, float width,float height){
+    cout << "Box Area : " << 2 * (length*width + width*height +height*length)<<endl;
 }
-//boxarea.h
+
+//boxVolume.h
 #include<iostream>
 using namespace std;
-void boxarea(float length,float width,float height)
-{
-    cout<<"Area of box : "<<2*((length*width)+(width*height)+(height*length))<<endl;
+void boxVolume(float length, float width, float height){
+    cout << "Box Volume : " << length*width*height << endl;
 }
