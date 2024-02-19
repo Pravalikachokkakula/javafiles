@@ -26,10 +26,10 @@ int main()
 {
     Student s1;
     string name;
-    double sp;
+    double sem percentage;
     cout<<"Enter your name:";
     getline(cin,name);
     cout<<"Enter your sem percentage:";
-    cin>>sp;
-    Student s2(name,sp);
+    cin>>sem percentage;
+    Student s2(name,sem percentage);
 }
