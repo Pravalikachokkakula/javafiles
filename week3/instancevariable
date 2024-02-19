@@ -4,7 +4,7 @@ using namespace std;
 class Student{
     private:
         string fullName;
-        int rollNum;
+        int rollnum;
         double semPercentage; 
         string collegeName;
         int collegeCode;
@@ -15,7 +15,7 @@ class Student{
         Student(string name,int num,double sem,string coll,int code) {
 
             fullName = name;
-            rollNum = num;
+            rollnum = num;
             semPercentage = sem;
             collegeName= coll;
             collegeCode = code;
