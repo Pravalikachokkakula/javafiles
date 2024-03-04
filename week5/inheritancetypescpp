@@ -1,81 +1,118 @@
 #include<iostream>
 using namespace std;
 
-class SuperClass
+class Class1
 {
     public:
-        int pubvar=9;
-
-    private:
-        int privar=5;
-
-    protected:
-        int provar=8;
-
-    public:
-        int gValp()
+        void aClass()
         {
-            return privar;
-        }
-        int gValpr()
-        {
-            return provar;
-        }
-        int gValpu()
-        {
-            return pubvar;
+            cout<<"Iam a Class1\n";
         }
 };
 
-//public  Inheritance
-class SubClass01: public SuperClass
+class Class2
 {
     public:
-        int var1=pubvar;
-        int var2=provar;
-        int var3=gValp();
+        void bClass()
+        {
+            cout<<"Iam a Class2\n";
+        }
 };
 
-//private  Inheritance
-class SubClass02: private SuperClass
+//Multiple Inheritance
+class Class3: public Class1,public Class2
 {
     public:
-        int variable1=pubvar;
-        int variable2=provar;
-        int variable3=gValp();
-
+        void cClass()
+        {
+            cout<<"Iam a Class3\n";
+        }
 };
 
-//protected  Inheritance
-class SubClass03: protected SuperClass
+//Simple Inheritance
+class Class4: public Class1
 {
     public:
-        int subvar1=pubvar;
-        int subvar2=provar;
-        int subvar3=gValp();
+        void dClass()
+        {
+            cout<<"Iam a Class4\n";
+        }
+};
 
+
+//Hybrid Inheritance
+class Class5: public Class3,public Class4
+{
+    public:
+        void eClass()
+        {
+            cout<<"Iam a Class5\n";
+        }
+};
+
+//Multi-Level Inheritance
+class Class6: public Class4
+{
+    public:
+        void fClass()
+        {
+            cout<<"Iam a Class6\n";
+        }
+};
+
+//Hierarichal Inheritance
+class Class7:public Class1
+{
+    public:
+        void gClass()
+        {
+            cout<<"Iam a Class7\n";
+        }
+};
+class Class8:public Class1
+{
+    public:
+        void hClass()
+        {
+            cout<<"Iam a Class8\n";
+        }
 };
 
 int main()
 {
-    SuperClass obj;
-    SubClass01 obj1;
-    SubClass02 obj2;
-    SubClass03 obj3;
-    cout<<"SubClass01\n";
-    cout<<"Public : "<<obj1.var1<<endl;
-    cout<<"Protected : "<<obj1.var2<<endl;
-    cout<<"Private : "<<obj1.var3<<endl;
-    cout<<"SubClass02\n";
-    /*cout<<"Public : "<<obj.pubvar<<endl;
-    cout<<"Protected : "<<obj.privar<<endl;
-    cout<<"Private : "<<obj.provar<<endl;*/
-    cout<<"Public : "<<obj2.variable1<<endl;
-    cout<<"Protected : "<<obj2.variable2<<endl;
-    cout<<"Private : "<<obj2.variable3<<endl;
-    cout<<"SubClass03\n";
-    cout<<"Public : "<<obj3.subvar1<<endl;
-    cout<<"Protected : "<<obj3.subvar2<<endl;
-    cout<<"Private : "<<obj3.subvar3<<endl;
+    //Simple Inheritance
+    cout<<"Simple Inheritance\n";
+    Class4 obj1;
+    obj1.aClass();
+    obj1.dClass();
+    //Multiple Inheritance
+    cout<<"Multiple Inheritance\n";
+    Class3 obj2;
+    obj2.aClass();
+    obj2.bClass();
+    obj2.cClass();
+    //Multi-Level Inheritance
+    cout<<"Multi-Level Inheritance\n";
+    Class6 obj3;
+    obj3.aClass();
+    obj3.dClass();
+    obj3.fClass();
+    //Hierarichal Inheritance
+    cout<<"Hierarichal Inheritance\n";
+    Class7 obj4;
+    Class8 obj5;
+    obj4.aClass();
+    obj4.gClass();
+    obj5.aClass();
+    obj5.hClass();
+    //Hybrid Inheritance
+    cout<<"Hybrid Inheritance\n";
+    Class5 obj6;
+    //obj6.aClass();
+    //aClass() method becomes ambiguous here
+    obj6.bClass();
+    obj6.cClass();
+    obj6.dClass();
+    obj6.eClass();
     return 0;
 }
