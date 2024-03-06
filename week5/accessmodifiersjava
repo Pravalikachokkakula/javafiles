@@ -1,9 +1,9 @@
 class Public 
 { 
 public 
-    String publicname="siri"; 
+    String publicname="pravalika"; 
 private 
-    int privateroll=531; 
+    int privateroll=538; 
 protected 
     int protectedcode=33; 
 public 
@@ -12,7 +12,7 @@ public
         return privateroll; 
     } 
 } 
-class InheritanceAccess 
+class inheritancetypes 
 { 
     public static void main(String[] args) 
     { 
