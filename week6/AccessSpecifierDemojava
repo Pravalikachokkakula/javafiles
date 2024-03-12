@@ -1,5 +1,5 @@
 import java.util.*;
-public class accessSpecifiersdemo{
+public class accessSpecifiersDemo{
     public int pubvar;
     protected int provar;
     private int privar;
@@ -17,7 +17,7 @@ public class accessSpecifiersdemo{
 }
 class Main{
     public static void main(String[] args){
-        accessSpecifiersdemo obj = new accessSpecifiersdemo();
+        accessSpecifiersDemo obj = new accessSpecifiersDemo();
         Scanner sc = new Scanner(System.in);
         int priValue,proValue,pubValue;
         System.out.println("Enter priValue,proValue,pubValue : ");
