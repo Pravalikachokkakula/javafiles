@@ -1,39 +1,28 @@
-import java.util.Scanner;
-class methodOverloading{
-   public void add(int a,int b){
-        System.out.println("a + b = " + (a+b));
-   }
-   public void add(int a,int b,float c){
-       System.out.println("a+b+c = " + (a+b+c));
-   }
-   public void student(int rollno,float percentage){
-       System.out.println("In 1st method");
-         System.out.println("Student percentage : " + percentage);
-         System.out.println("Roll no : " + rollno);
-   }
-   public void student(float percentage,int rollno){
-         System.out.println("In 2nd method");
-         System.out.println("Student percentage : " + percentage);
-         System.out.println("Roll no : " + rollno);
-   }
-  
-   public static void main(String[] args) {
-       Scanner sc = new Scanner(System.in);
-       System.out.println("Enter a : ");
-       int a = sc.nextInt();
-       System.out.println("Enter b : ");
-       int b = sc.nextInt();
-       System.out.println("Enter c in float : ");;
-       float c = sc.nextFloat();
-       System.out.println("Enter rollNo : ");
-       int rollNo = sc.nextInt();
-       System.out.println("Enter percentage : ");
-       float percentage = sc.nextFloat();
-       methodOverloading obj = new methodOverloading();
-       obj.add(a,b);
-       obj.add(a,b,c);
-       obj.student(rollNo,percentage);
-       obj.student(percentage,rollNo);
-       sc.close();
-   }
+class A {
+    public void add(int a, int b) {
+        System.out.println(a + " + " + b + " = " + (a + b));
+    }
+
+    public void add(int a, int b, int c) {
+        System.out.println(a + " + " + b + " + " + c + " = " + (a + b));
+    }
+}
+
+class B extends A {
+    public void add(double a, double b) {
+        System.out.println(a + " + " + b + " = " + (a + b));
+    }
+
+    public void add(double a, double b, double c) {
+        System.out.println(a + " + " + b + " + " + c + " = " + (a + b));
+    }
+}
+
+class methodOverloadInheritance{
+    public static void main(String[] args) {
+        B obj = new B();
+        obj.add(35, 43);
+        obj.add(34.64, 82.36);
+        obj.add(97.12, 12.64, 64.24);
+    }
 }
