@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class Add{
+   public:
+    int add(int a,int b){
+        return a+b;
+    }
+    int add(int a,int b,int c){
+        return a+b+c;
+    }
+    float add(float a,float b){
+        return a+b;
+    }
+    float add(float a,float b,float c){
+        return a+b+c;
+    }
+};
+int main(){
+    Add obj;
+    int a,b,c;
+   cout<<"Enter a : "<<endl;
+    cin>>a;
+    cout<<"Enter b : "<<endl;
+    cin>>b;
+    cout<<"Enter c : "<<endl;
+    cin>>c;
+    cout<<obj.add(a,b)<<endl;
+    cout<<obj.add(a,b,c)<<endl;
+    cout<<obj.add(5.8f,6.8f)<<endl;
+    cout<<obj.add(5.9f,6.9f,8.9f)<<endl;
+
+}
