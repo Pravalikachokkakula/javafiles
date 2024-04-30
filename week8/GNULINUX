@@ -1,0 +1,27 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+public class FileStream {
+public static void main(String[] args) {
+FileInputStream file=null;
+FileOutputStream file1=null;
+try{
+file=new FileInputStream("/home/Documents/pravalika/file.txt");
+file1=new FileOutputStream("/home/Documents/pravalika/file1.txt");
+try {
+System.out.println("Total Number of Bytes : "+file.available());
+int i;
+while ((i=file.read())!=-1) {
+file1.write(i);
+}
+file.close();
+file1.close();
+} catch (IOException e) {
+System.out.println("An error occurred while performing input/.");
+}
+}catch(FileNotFoundException e){
+System.out.println("The File is not found here");
+}
+}
+}
